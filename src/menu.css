@@ -1,0 +1,124 @@
+:root {
+    --orange: #F5980C;
+  }
+  
+  .text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    text-align: center;
+  }
+  
+  .title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.875vw;
+    color: white;
+  }
+
+/* Header */
+.header {
+    display: flex;
+    padding: 5px 10%;
+    background-color: var(--orange);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header__nav-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-button {
+    display: none; 
+  }
+  
+  
+  .logo {
+    font-size: 3vw;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+  }
+  
+  
+  .header__nav-item {
+    border-bottom: 2px solid var(--orange);
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+  }
+  
+  .header__nav-item:hover{
+    border-bottom: 2px solid white;
+    transition: all ease-in 200ms;
+  }
+  
+  .header__nav-item.text {
+    font-weight: 600;
+    font-size: 1.2vw;
+  }
+  
+  .header__nav-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .header__btn {
+      padding: 0.2125vw 2vw ;
+      text-align: center  ;
+      border: 0.125vw solid white;
+      border-radius: 2vw;
+      font-weight: 600;
+      color: var(--orange);
+      background-color: white;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.226);
+  }
+  
+  .header__btn:hover {
+    border: 0.125vw solid white;
+      background-color: var(--orange);
+      cursor: pointer;
+      color: white;
+      transition: all ease-in .2s;
+  }
+
+    .footer {
+        display: flex;
+        background-color: var(--orange);
+        justify-content: center;
+    }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10vw 0;
+  }
+
+  .item__content {
+    display: flex;
+    max-width: 37.5vw;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2% 0;
+  }
+
+  .item__title.title {
+    font-size: 5.375vw;
+    margin-bottom: 3.125vw;
+  }
+
+  .item__description.text {
+    font-weight: 600;
+    margin-bottom: 5.125vw;
+  }
+
+  .item__price.title {
+    color: black;
+    text-align: right;
+    font-size: 1.875vw;
+  }
+
+  .item__img{
+    max-width: 30vw;
+    border-radius: 10%;
+  }
