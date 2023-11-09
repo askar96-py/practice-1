@@ -1,0 +1,150 @@
+@import url('./normal.css');
+
+:root {
+    --white-blue: rgb(224, 243, 251);
+    --blue: #009DE0;
+    --grey: #E4E4E4;
+}
+
+.title {
+    font-family: 'Lobster', sans-serif;
+}
+
+.sub_title {
+    font-family: 'Lobster', sans-serif;
+}
+
+.text, .restaurants__name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+
+/* Навигация */
+
+.navbar {
+  background-color: white;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+
+.navbar-brand > img{
+  min-width: 80px;
+  margin-right: 30px;
+}
+
+.nav-city-items:not(:last-child) {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+.search {
+  border-radius: 100px;
+  width: 200px;
+  background-color: var(--grey);
+}
+
+.register_btn {
+  border-radius: 10px;
+  background-color: var(--white-blue);
+  color: var(--blue);
+  border: 2px solid var(--white-blue);
+}
+
+.register_btn:hover {
+  background-color: var(--blue);
+  color: var(--white-blue);
+  border: 2px solid var(--blue);
+}
+
+
+/* Main */
+.main {
+  padding: 0 3%;
+}
+.main__title {
+  padding-top: 50px;
+}
+
+.main__sub-title {
+  padding-top: 30px;
+}
+.main__category {
+  height: auto;
+}
+
+.main__cards {
+  width: 14.5vw;
+  border-radius: 10px;
+  border: 1px solid var(--grey);
+}
+
+
+.main__card-img {
+  border-radius: 10px 10px 0 0;
+}
+
+.main__card-descriptions {
+  padding: 10px;
+}
+
+.carousel-inner {
+  padding-top: 30px;
+}
+
+.carousel-control-prev {
+  right: 6.375vw;
+  left: auto;
+  bottom: 100%;
+}
+
+.carousel-control-next {
+  right: 3vw;
+  left: auto;
+  bottom: 100%;
+  transform: rotate(180deg);
+}
+
+.restaurants__title {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.restaurants__item {
+  width: 30vw;
+  border: 1px solid var(--grey);
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.restaurants__img {
+  border-radius: 20px 20px 0 0;
+}
+
+.restaurants__img:hover{
+  object-fit: cover;
+}
+.restaurants__name {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 3%;
+}
+.restaurants__description  {
+  font-size: 14px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 3%;
+  color: gray;
+  font-weight: 400;
+}
+
+.restaurants__link:hover  {
+  color: #009DE0;
+
+}
+

@@ -1,106 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="src/css/media.css">
-    <title>Restaurant</title>
-</head>
-<body>
-    <header class="header">
-        <div id="header__logo"><a href="#"><span class="logo">GourmetGrove</span></a></div>
-        <nav id="nav" class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item text"><a href="#">Главная</a></li>
-                <li class="header__nav-item text"><a href="./index.html#Menu">Меню</a></li>
-                <li class="header__nav-item text"><a href="./index.html#Reviews">Отзывы</a></li>
-            </ul>
-        </nav>
-        <button class="header__btn"><span class="text">Заказать</span></button>
-    </header>
-    
-    <section class="presentation">
-        <img src="./src/img/background.jpg">
-        <div class="presentation__content">
-            <h1 class="presentation__title logo">GourmetGrove</h1>
-            <h2 class="presentation__under_title text">RESTAURANT</h2>
-            <p class="presentation__description text"><span style="color: #F5980C;"><b>GourmetGrove</b></span> - идеальное место для романтических ужинов, семейных встреч и деловых обедов. Наши разнообразные меню подходят для всех вкусов, включая мясные, рыбные и вегетарианские блюда, а также великолепные десерты.
-                Присоединяйтесь к нам и наслаждайтесь вкусом и атмосферой, которые мы предлагаем.</p>
-            <button class="presentation__btn"><span class="text">Заказать</span></button>
-        </div>
-    </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./src/css/styles.css">
+        <link rel="stylesheet" href="./src/css/media.css">
+        <title>Wolt</title>
+    </head>
+    <body>
+        <header>
+            <!-- Навигация -->
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light">
 
-    <main>
-        
-        <section id="Menu" class="menu">
-            <h1 class="menu__header title">Menu</h1>
-            <div class="menu__list">
-                <div class="menu__item">
-                    <a href="./src/soups.html">
-                        <img class="menu__img" src="./src/img/soups.jpg">
-                        <h3 class="menu__item_name title">Soups</h3>
-                    </a>
-                </div>
-                <div class="menu__item">
-                    <a href="./src/stakes.html">
-                        <img class="menu__img" src="./src/img/stakes.jpg">
-                        <h3 class="menu__item_name title">Stakes</h3>
-                    </a>
-                </div>
-                <div class="menu__item">
-                    <a href="./src/dessert.html">
-                        <img class="menu__img" src="./src/img/dessert.jpg">
-                        <h3 class="menu__item_name title">Dessert</h3>
-                    </a>
-                </div>
-                <div class="menu__item">
-                    <a href="./src/snacks.html">
-                        <img class="menu__img" src="./src/img/snacks.jpg">
-                        <h3 class="menu__item_name title">Snacks</h3>
-                    </a>
-                </div>
-                <div class="menu__item">
-                    <a href="./src/beverages.html">
-                        <img class="menu__img" src="./src/img/beverages.jpg">
-                        <h3 class="menu__item_name title">Beverages</h3>
-                    </a>
+                    <!-- Логотип -->
+                    <ul class="d-flex align-items-center">
+                        <li>
+                            <a class="navbar-brand" href="#"><img src="./src/img/wolt.svg" alt="Логотип"></a>
+                        </li>
+                        <li class="city-modal">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="d-flex align-items-center"> 
+                                    <img class="nav-city-items" src="./src/img/map-pointer.svg">
+                                    <p class="text" style="margin-right: 5px;">Астана</p>
+                                    <img class="nav-city-items" src="./src/img/chevron-down.svg"> 
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                    <!-- Поиск -->
+                    <form class="form-inline mx-auto">
+                        <input class="form-control mr-sm-2 search" type="search" placeholder="Поиск в Wolt..." aria-label="Search">
+                    </form>
+
+                    <!-- Кнопка меню. Дефолт скрыто. Для устройств с разрешением экрана меньше 1024-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <!-- Аутентификация -->
+                    <ul class="navbar-nav md-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text" href="#">Войти</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="register_btn btn btn-primary text" data-toggle="modal" data-target="#registrationModal">Зарегистрироваться</button>
+                        </li>
+                    </ul>
+            </nav>
+                <!-- Меню когда включен -->
+            <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+                <div class="bg-light p-4">
+                    <a href="#">Войти или Зарегестрироваться</a>
                 </div>
             </div>
-        </section>
-        
-        <section id="Reviews" class="reviews">
-            <h1 class="reviews__title title">Reviews</h1>
-            <div class="reviews__list">
-                <div class="reviews__item">
-                    <p class="reviews__text text">
-                        Опыт в ресторане <span style="color: #F5980C;">GourmetGrove</span> - это настоящее путешествие в мир вкуса!<br>Восхитительные блюда и великолепное обслуживание сделали наш вечер незабываемым. Обязательно вернемся снова!
-                    </p>
-                    <h3 class="reviews__person title">Askar</h3>
-                </div>
-                <div class="reviews__item">
-                    <p class="reviews__text text">
-                        <span style="color: #F5980C;">GourmetGrove</span> поразил нас с первого визита. Блюда просто волшебство, их вкус и представление на уровне искусства. Великолепная атмосфера и дружелюбный персонал создали незабываемый ужин. Мы уже планируем возвращение!
-                    </p>
-                    <h3 class="reviews__person title">Aruzhan</h3>
-                </div>
-                <div class="reviews__item">
-                    <p class="reviews__text text">
-                        Завершение дня в <span style="color: #F5980C;">GourmetGrove</span> - это настоящее удовольствие. Здесь вас ждет настоящее гастрономическое путешествие. Изысканные блюда, внимательное обслуживание и уютная атмосфера делают этот ресторан местом, куда хочется возвращаться снова и снова.
-                    </p>
-                    <h3 class="reviews__person title">Andrey</h3>
-                </div>
+        </header>
+        <main class="main">
+            <div class="main__title">
+                <h1 class="title">Рестораны - Астаны</h1>
             </div>
-        </section>
-
-    </main>
-    
-    <footer class="footer">
-        <div class="footer__logo"><span class="logo">GourmetGrove</span></div>
-    </footer>
-</body>
+            <div class="main__sub-title">
+                <h4 class="title">Категории</h4>
+            </div>
+            <!-- Category carousel -->
+            <div id="carouselExampleDark" class="main__category carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active data-bs-interval="10000">
+                        <div class="d-flex justify-content-between">
+                            <!-- 1 -->
+                            <div class="main__cards">
+                                <img class="main__card-img"  src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/a69b5aea-c5a8-11ea-9f48-2e3b484a03e4_0b2c3eb5_ae95_4bff_9144_7f7c93ea74f9.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Бургер</p>
+                            </div>
+                            <!-- 2 -->
+                            <div class="main__cards">
+                                <img  class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/53129366-c5a8-11ea-8a78-822e244794a0_52b897cd_ac18_4cb5_9921_2653f1d38650.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Пицца</p>
+                            </div>
+                            <!-- 3 -->
+                            <div class="main__cards">
+                                <img  class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/90afac70-c5af-11ea-8a78-822e244794a0_7e31d123_8ff4_4211_9f17_88ae65a175bd.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Дессерты</p>
+                            </div>
+                            <!-- 4 -->
+                            <div class="main__cards">
+                                <img class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/fd1d18e0-c5a8-11ea-8a78-822e244794a0_a1852dc9_4afb_4877_9659_793adcb0f87b.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Салаты</p>
+                            </div>
+                            <!-- 5 -->
+                            <div class="main__cards">
+                                <img class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/2d24d3ee-c5b2-11ea-a452-2e3b484a03e4_331daa86_a0e3_45da_bd06_05f8a6df06f3.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Завтрак</p>
+                            </div>
+                            <!-- 6 -->
+                            <div class="main__cards">
+                                <img  class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/fe4c3f8a-c5a7-11ea-a452-2e3b484a03e4_e756ebaf_aa52_41ef_8256_31f6d788b8e2.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Суши</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item data-bs-interval="2000">
+                        <div class="d-flex justify-content-between">
+                            <!-- 7 -->
+                            <div class="main__cards">
+                                <img  class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/7f77b0a2-c5a9-11ea-b72a-c2fc8785833c_57601b6c_2bf1_4240_a6d0_da0d7dca0517.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Супы</p>
+                            </div>
+                            <!-- 8 -->
+                            <div class="main__cards">
+                                <img  class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/8469121c-cb98-11ec-aea3-6e751d6aff91_87f42415_c563_4359_a7bb_f31d7c8f6378.png-md?w=400">
+                                <p class="main__card-descriptions text">Донер</p>
+                            </div>
+                            <!-- 9 -->
+                            <div class="main__cards">
+                                <img  class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/4b29c514-c5af-11ea-9f48-2e3b484a03e4_79c34f68_00f6_4f6f_8f07_7fb624561638.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Паста</p>
+                            </div>
+                            <!-- 10 -->
+                            <div class="main__cards">
+                                <img  class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/f81ce6f6-edb0-11ea-9484-8ee68693b22d_5c5db254_8612_4c38_9045_9fe65b76a51f.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Восточная</p>
+                            </div>
+                            <!-- 11 -->
+                            <div class="main__cards">
+                                <img class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/477dce80-c5b2-11ea-b203-822e244794a0_2b8df064_a715_40a1_b564_113e5c18aeda.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Рамен</p>
+                            </div>
+                            <!-- 12 -->
+                            <div class="main__cards">
+                                <img class="main__card-img" src="https://imageproxy.wolt.com/wolt-frontpage-images/categories/c6afd63e-c5ae-11ea-9f48-2e3b484a03e4_6713ecce_0651_49fc_8791_f1744b7c982b.jpg-md?w=400">
+                                <p class="main__card-descriptions text">Стейк</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel Arrows -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <img class="arrows" src="./src/img/left.svg" width="30px">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <img class="arrows" src="./src/img/left.svg" width="30px">
+                </button>
+            </div>
+            <section class="restaurants">
+                <h4 class="restaurants__title title">Все рестораны</h4>
+                <div class="restaurants__container d-flex flex-wrap justify-content-around">
+                    <!-- "Пока что здесь пусто" -->
+                    <div class="restaurants__item">
+                        <a class="restaurants__link" href="./src/templates/koktem.html">
+                            <img class="restaurants__img" src="https://imageproxy.wolt.com/venue/5dd7e22d09efd5603d21a67f/5ce470b4-9bfa-11ed-a1b6-56738bc9c4e5_koktem.jpg">
+                            <h3 class="restaurants__name">Коктем</h3>
+                            <p class="restaurants__description text">Городское Центральное кафе Лауреат&nbsp;Премии Wolt-2020</p>
+                        </a>
+                    </div>
+                    <div class="restaurants__item">
+                        <a class="restaurants__link" href="./src/templates/koktem.html">
+                            <img class="restaurants__img" src="https://imageproxy.wolt.com/venue/5dd7e22d09efd5603d21a67f/5ce470b4-9bfa-11ed-a1b6-56738bc9c4e5_koktem.jpg">
+                            <h3 class="restaurants__name">Коктем</h3>
+                            <p class="restaurants__description text">Городское Центральное кафе Лауреат&nbsp;Премии Wolt-2020</p>
+                        </a>
+                    </div>
+                    <div class="restaurants__item">
+                        <a class="restaurants__link" href="./src/templates/koktem.html">
+                            <img class="restaurants__img" src="https://imageproxy.wolt.com/venue/5dd7e22d09efd5603d21a67f/5ce470b4-9bfa-11ed-a1b6-56738bc9c4e5_koktem.jpg">
+                            <h3 class="restaurants__name">Коктем</h3>
+                            <p class="restaurants__description text">Городское Центральное кафе Лауреат&nbsp;Премии Wolt-2020</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+              <!-- Модальное окно -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Заголовок модального окна<h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                        </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                      <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </main>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
 </html>

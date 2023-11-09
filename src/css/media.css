@@ -1,55 +1,87 @@
-@media (max-width: 768px) {
 
-    .header__nav-item.text {
-        font-size: 7px;
-    }
-    .header__btn {
-        font-size: 5px;
+@media (max-width: 996px) {
+    .text, .restaurants__description {
+        font-size: 14px;
     }
 
-    .presentation__btn {
-        font-size: 7px;
+    .navbar-toggler {
+        display: block;
     }
 
-    .menu__list {
-        gap: 5%;
+    .navbar-nav {
+        display: none;
     }
 
-    .menu__img {
-        min-width: 150px;
+    .main__cards {
+        width: 14vw;
     }
-
-    .menu__item_name {
-        font-size: 10px;
+    .arrows {
+        width: 25px;
+    }
+    .carousel-control-prev {
+        right: 50px;
+    }
+    .carousel-control-next {
+        right: 0;
+    }
+    .restaurants__name {
+        max-width: 20px;
     }
 }
 
-@media (max-width: 1024px) {
-    
-    .item {
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: center;
+
+@media (max-width: 768px) {
+
+    .text, .restaurants__description {
+        font-size: 12px;
     }
 
-    .item__content {
-        text-align: center;
-        max-width: 70vw;
+    .city-modal, 
+    .main__cards:last-child,  
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
     }
 
-    .item__description.text {
-        font-size: 2vw;
-        
+    .main__cards {
+        width: 16vw;
     }
 
-    .item__price.title {
-        text-align: center;
-        font-size: 4vw;
+    .restaurants__item {
+        width: 500px;
+    }
+    .restaurants__name {
+        max-width: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text, .restaurants__description {
+        font-size: 10px;
     }
 
-    .item__img {
-        max-width: 70vw;
+    .search {
+        width: 150px;
     }
 
+    .main__cards {
+        width: 90px;
+    }
 
+    .main__cards:nth-last-child(-n+2) {
+        display: none;
+    }
+
+    .main__cards {
+        width: 85px;
+    }
+}
+
+@media (max-width: 370px) {
+    .search {
+        display: none;
+    }
+    .main__cards {
+        width: 65px;
+    }
 }

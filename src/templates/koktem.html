@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/restaurant_style.css">
+        <link rel="stylesheet" href="../css/restaurant_media.css">
+        <title>Wolt | Koktem</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar sticky-top navbar-light bg-light">
+                <div class="container-fluid"></div>
+                    <!-- Логотип -->
+                    <ul class="d-flex align-items-center">
+                        <li>
+                            <a class="navbar-brand" href="../../index.html"><img src="../img/wolt.svg" alt="Логотип"></a>
+                        </li>
+                        <li class="city-modal">
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <div class="d-flex align-items-center"> 
+                                    <img class="nav-city-items" src="../img/map-pointer.svg">
+                                    <p class="text" style="margin-right: 5px;">Астана</p>
+                                    <img class="nav-city-items" src="../img/chevron-down.svg"> 
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                    
+                    <!-- Кнопка Заказать -->
+                    <button type="button" class="ordering btn btn-primary" data-bs-toggle="modal" data-bs-target="#order">Заказать</button>
+
+                    <!-- Скрытая кнопка меню -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Переключить навигацию">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                </div>
+            </nav>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wolt</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link right-nav active" aria-current="page" href="../../index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link right-nav" href="#">Войти или Зарегистрироваться</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </header>
+        <section class="presentation">
+            <img class="presentation__img" src="https://imageproxy.wolt.com/venue/5dd7e22d09efd5603d21a67f/5ce470b4-9bfa-11ed-a1b6-56738bc9c4e5_koktem.jpg">
+            <div class="presentation__content">
+                <h1 class="presentation__title title">Коктем</h1>
+                <p class="presentation__description">Городское Центральное кафе<br>Лауреат Премии Wolt-2020 🏆</p>
+            </div>
+        </section>
+        <nav class="navbar sticky-top navbar-light bg-light">
+            <div class="nav d-flex">
+                <a class="nav-link text" aria-current="page" href="#new">НОВИНКИ✨</a>
+                <a class="nav-link text" href="#">ДЕСЕРТЫ 🍰</a>
+                <a class="nav-link text" href="#">ТОРТЫ 🍰</a>
+                <a class="nav-link text" href="#">ВЕГАН ДЕСЕРТЫ 🍰</a>
+                <a class="nav-link text" href="#">БЕЗГЛЮТЕНОВЫЕ ДЕСЕРТЫ 🍰</a>
+            </div>
+            <!-- Поиск -->
+            <form class="form-inline ml-auto">
+                <input class="form-control mr-sm-2 search" type="search" placeholder="Искать в Коктем..." aria-label="Search">
+            </form>
+        </nav>
+        <main>
+            <!-- New -->
+            <h1 id="new" class="name__category">НОВИНКИ✨</h1>
+            <section class="new d-flex justify-content-between flex-wrap">
+                <button type="button" class="new__btn" data-bs-toggle="modal" data-bs-target="#cheesecakeModal">
+                    <div class="new__item container-fluid d-flex justify-content-between">
+                        <div class="new__item-content">
+                            <h6 class="new__item-name text">Бакский Чизкейк</h6>
+                            <p class="new__item-description text">Сыр кремето, сливки, мука, сахарная пудра, бельгийский шоколад, вафельная крошка.</p>
+                            <span class="new__item-price text">2 650 KZT</span>
+                        </div>
+                        <img class="new__item-img" src="https://imageproxy.wolt.com/menu/menu-images/5dd826697345c00679fd8ba9/af3f847c-672c-11ee-8345-e67495efef0c_7b18e244_92db_4182_8e1c_901a3b5ca6af.jpg?w=200">
+                    </div>
+                </button>
+                <button type="button" class="new__btn" data-bs-toggle="modal" data-bs-target="#AlpenGoldModal">
+                    <div class="new__item container-fluid d-flex justify-content-between">
+                        <div class="new__item-content">
+                            <h6 class="new__item-name text">Альпен Гольд</h6>
+                            <p class="new__item-description text">Альпен Гольд</p>
+                            <span class="new__item-price text">2 650 KZT</span>
+                        </div>
+                        <img class="new__item-img" src="https://imageproxy.wolt.com/menu/menu-images/5dd826697345c00679fd8ba9/82437674-60ea-11ee-9e02-0a0470fa5c87_629422b6_a12d_4d8d_a295_378fae991f11.png?w=200">
+                    </div>
+                </button>
+                <button type="button" class="new__btn" data-bs-toggle="modal" data-bs-target="#GingerBreadModal">
+                    <div class="new__item container-fluid d-flex justify-content-between">
+                        <div class="new__item-content">
+                            <h6 class="new__item-name text">Пряник</h6>
+                            <p class="new__item-description text">Пряник</p>
+                            <span class="new__item-price text">2&nbsp;750&nbsp;KZT</span>
+                        </div>
+                        <img class="new__item-img" src="https://imageproxy.wolt.com/menu/menu-images/5dd826697345c00679fd8ba9/8245b33a-60ea-11ee-9e02-0a0470fa5c87_75eac9a0_8814_43e4_b033_8411e29ed538.png?w=200">
+                    </div>
+                </button>
+            </section>
+
+            
+        </main>
+        <!-- Модальное окно Выбрать Город -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Изменение деталей заказа</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Готово</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно Чизкейк -->
+        <div class="modal fade" id="cheesecakeModal" tabindex="-1" aria-labelledby="cheesecakeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="cheesecakeModalLabel"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://imageproxy.wolt.com/menu/menu-images/5dd826697345c00679fd8ba9/af3f847c-672c-11ee-8345-e67495efef0c_7b18e244_92db_4182_8e1c_901a3b5ca6af.jpg">
+                    <h3 class="item-name text">Бакский Чизкейк</h3>
+                    <span class="item-price text">2 650 KZT</span>
+                    <p class="item-description text">Сыр кремето, сливки, мука, сахарная пудра, бельгийский шоколад, вафельная крошка.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" style="width: 100%;">Добавить к заказу</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="AlpenGoldModal" tabindex="-1" aria-labelledby="AlpenGoldModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="AlpenGoldModalLabel"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://imageproxy.wolt.com/menu/menu-images/5dd826697345c00679fd8ba9/82437674-60ea-11ee-9e02-0a0470fa5c87_629422b6_a12d_4d8d_a295_378fae991f11.png">
+                    <h3 class="item-name text">Альпен Гольд</h3>
+                    <span class="item-price text">2 650 KZT</span>
+                    <p class="item-description text">Альпен Гольд</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" style="width: 100%;">Добавить к заказу</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="modal fade" id="GingerBreadModal" tabindex="-1" aria-labelledby="GingerBreadModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="GingerBreadModalLabel"></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://imageproxy.wolt.com/menu/menu-images/5dd826697345c00679fd8ba9/8245b33a-60ea-11ee-9e02-0a0470fa5c87_75eac9a0_8814_43e4_b033_8411e29ed538.png">
+                    <h3 class="item-name text">Пряник</h3>
+                    <span class="item-price text">2 750 KZT</span>
+                    <p class="item-description text">Пряник</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" style="width: 100%;">Добавить к заказу</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+</html>
